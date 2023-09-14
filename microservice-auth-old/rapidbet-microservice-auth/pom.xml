@@ -60,26 +60,26 @@
 			<version>1.37.0</version>
 		</dependency>
 	</dependencies>
-	<repositories>
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>bintray-lognet-maven</id>
-			<name>bintray</name>
-			<url>http://dl.bintray.com/lognet/maven</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>bintray-lognet-maven</id>
-			<name>bintray-plugins</name>
-			<url>http://dl.bintray.com/lognet/maven</url>
-		</pluginRepository>
-	</pluginRepositories>
+<!--	<repositories>-->
+<!--		<repository>-->
+<!--			<snapshots>-->
+<!--				<enabled>false</enabled>-->
+<!--			</snapshots>-->
+<!--			<id>bintray-lognet-maven</id>-->
+<!--			<name>bintray</name>-->
+<!--			<url>http://dl.bintray.com/lognet/maven</url>-->
+<!--		</repository>-->
+<!--	</repositories>-->
+<!--	<pluginRepositories>-->
+<!--		<pluginRepository>-->
+<!--			<snapshots>-->
+<!--				<enabled>false</enabled>-->
+<!--			</snapshots>-->
+<!--			<id>bintray-lognet-maven</id>-->
+<!--			<name>bintray-plugins</name>-->
+<!--			<url>http://dl.bintray.com/lognet/maven</url>-->
+<!--		</pluginRepository>-->
+<!--	</pluginRepositories>-->
 
 	<build>
 		<plugins>
