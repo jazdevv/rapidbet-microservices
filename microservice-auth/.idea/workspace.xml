@@ -4,25 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcbf2cea-5c98-447c-a764-63d51df81a12" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/microservice-auth.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapidbet-microservice-auth/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapidbet-microservice-auth/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapidbet-microservice-auth/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapidbet-microservice-auth/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapidbet-microservice-auth/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapidbet-microservice-auth/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapidbet-microservice-auth/src/main/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/RapidbetMicroserviceAuthApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapidbet-microservice-auth/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rapidbet-microservice-auth/src/test/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/RapidbetMicroserviceAuthApplicationTests.java" beforeDir="false" />
+    <list default="true" id="e2c78f3f-c450-4e10-94c1-382589d91947" name="Changes" comment="fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/proto/jwtauthorized.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/services/AuthGRPCService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -30,10 +26,15 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2VNFDYVdKMy3Rw8rblCunNQRfyy" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
+  <component name="ProjectId" id="2VNJNJRMDKU0qkboj4wlcBe2yyy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,25 +43,31 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/J/Desktop/rapidbet-microservices",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
+    "last_opened_file_path": "C:/Users/J/Desktop/rapidbet-microservices/microservice-auth-old",
     "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bcbf2cea-5c98-447c-a764-63d51df81a12" name="Changes" comment="" />
-      <created>1694668511562</created>
+      <changelist id="e2c78f3f-c450-4e10-94c1-382589d91947" name="Changes" comment="" />
+      <created>1694670563889</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1694668511562</updated>
+      <updated>1694670563889</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix">
+      <created>1694670774069</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694670774069</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.proto" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>
