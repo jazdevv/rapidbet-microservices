@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c78f3f-c450-4e10-94c1-382589d91947" name="Changes" comment="add: universal files">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e2c78f3f-c450-4e10-94c1-382589d91947" name="Changes" comment="add: remove grpc usage">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/services/AuthGRPCService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/services/AuthGRPCService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rapidbet-microservice-auth/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +21,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jazdevv"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4a3ec9cc-cea0-478d-b24c-502cc200c16d" />
+        <option name="url" value="https://github.com/jazdevv/rapidbet-microservices.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1694670563889</updated>
       <workItem from="1694798744401" duration="1963000" />
-      <workItem from="1694948142571" duration="627000" />
+      <workItem from="1694948142571" duration="1251000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1694670774069</created>
@@ -101,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694671090494</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add: remove grpc usage">
+      <option name="closed" value="true" />
+      <created>1694949415616</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694949415616</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +128,7 @@
     <MESSAGE value="fix" />
     <MESSAGE value="add: jwtauthorized.proto &amp; AuthGRPCService" />
     <MESSAGE value="add: universal files" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: universal files" />
+    <MESSAGE value="add: remove grpc usage" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: remove grpc usage" />
   </component>
 </project>
