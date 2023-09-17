@@ -1,0 +1,40 @@
+version: '3'
+services:
+  # Message broker rabbitmq
+  rabbitmq:
+    image: "rabbitmq:management"
+    # mem_limit: 100M
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"   # RabbitMQ main port
+      - "15672:15672" # RabbitMQ management UI port
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+  #Service for the recetas application
+  auth:
+    image: rapidbetauth:latest
+    # mem_limit: 500M
+    ports:
+      - "3001:3001"
+    environment:
+      - SERVER_PORT=3001
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres_auth:5433/mydb
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
+    depends_on:
+      - postgres_auth
+
+  # PostgreSQL database service for recetas application
+  postgres_auth:
+    image: postgres:latest
+    # mem_limit: 50M
+    container_name: postgres_auth
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      PGPORT: 5433
+    ports:
+      - "5433:5433"
