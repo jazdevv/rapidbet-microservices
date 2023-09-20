@@ -51,3 +51,15 @@ services:
       PGPORT: 5434
     ports:
       - "5434:5434"
+  # PostgreSQL database service for userbets application
+  postgres_userbets:
+    image: postgres:latest
+    # mem_limit: 50M
+    container_name: postgres_userbets
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      PGPORT: 5435
+    ports:
+      - "5435:5435"
