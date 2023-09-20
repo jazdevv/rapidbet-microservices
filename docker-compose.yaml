@@ -12,21 +12,22 @@ services:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
   #Service for the recetas application
-  auth:
-    image: rapidbetauth:latest
-    # mem_limit: 500M
-    ports:
-      - "3001:3001"
-    environment:
-      - SERVER_PORT=3001
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres_auth:5433/mydb
-      - SPRING_DATASOURCE_USERNAME=admin
-      - SPRING_DATASOURCE_PASSWORD=admin
-      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
-    depends_on:
-      - postgres_auth
+#  auth:
+#    image: rapidbetauth:latest
+#    # mem_limit: 500M
+#    ports:
+#      - "3001:3001"
+#    environment:
+#      - SERVER_PORT=3001
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres_auth:5433/mydb
+#      - SPRING_DATASOURCE_USERNAME=admin
+#      - SPRING_DATASOURCE_PASSWORD=admin
+#      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
+#    depends_on:
+#      - postgres_auth
+##      - rabbitmq
 
-  # PostgreSQL database service for recetas application
+  # PostgreSQL database service for auth application
   postgres_auth:
     image: postgres:latest
     # mem_limit: 50M
@@ -38,3 +39,15 @@ services:
       PGPORT: 5433
     ports:
       - "5433:5433"
+  # PostgreSQL database service for bets application
+  postgres_bets:
+    image: postgres:latest
+    # mem_limit: 50M
+    container_name: postgres_bets
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      PGPORT: 5434
+    ports:
+      - "5434:5434"
