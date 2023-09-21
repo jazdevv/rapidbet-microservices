@@ -40,7 +40,7 @@ public class AuthController {
 
                 return ResponseEntity.ok()
                         .headers(responseHeaders)
-                        .body(new ResponseLogin("succes","user creted succefully", newUser,cookie.toString()));
+                        .body(new ResponseLogin("succes","user creted succefully", newUser,token));
 
             }else{
                 return ResponseEntity.badRequest()
@@ -72,7 +72,7 @@ public class AuthController {
 
                 return ResponseEntity.ok()
                         .headers(responseHeaders)
-                        .body(new ResponseLogin("succes","user logged succefully", null, cookie.toString()));
+                        .body(new ResponseLogin("succes","user logged succefully", null, token));
 
             }else{
                 return ResponseEntity.badRequest()
