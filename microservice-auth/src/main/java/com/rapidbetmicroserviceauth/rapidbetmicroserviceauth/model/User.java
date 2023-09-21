@@ -3,7 +3,7 @@ package com.rapidbetmicroserviceauth.rapidbetmicroserviceauth.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user_table")
 public class User {
 
     @Id
