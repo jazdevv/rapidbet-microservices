@@ -11,8 +11,6 @@ import lombok.ToString;
 @Setter
 @ToString
 public class ResponseLogin {
-    String status;
-    String message;
     User data;
     String jwt;
 }

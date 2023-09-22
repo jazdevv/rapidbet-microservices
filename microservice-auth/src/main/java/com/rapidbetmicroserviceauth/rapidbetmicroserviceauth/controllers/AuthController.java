@@ -1,8 +1,11 @@
 package com.rapidbetmicroserviceauth.rapidbetmicroserviceauth.controllers;
 
 import com.rapidbetmicroserviceauth.rapidbetmicroserviceauth.model.User;
+import com.rapidbetmicroserviceauth.rapidbetmicroserviceauth.payload.DTO.AuthorizeJWTDTO;
 import com.rapidbetmicroserviceauth.rapidbetmicroserviceauth.payload.DTO.LoginDTO;
+import com.rapidbetmicroserviceauth.rapidbetmicroserviceauth.payload.response.ResponseAuthorizeJWT;
 import com.rapidbetmicroserviceauth.rapidbetmicroserviceauth.payload.response.ResponseLogin;
+import com.rapidbetmicroserviceauth.rapidbetmicroserviceauth.payload.response.ResponseTemplate;
 import com.rapidbetmicroserviceauth.rapidbetmicroserviceauth.services.UserService;
 import com.rapidbetmicroserviceauth.rapidbetmicroserviceauth.utils.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,16 +43,27 @@ public class AuthController {
 
                 return ResponseEntity.ok()
                         .headers(responseHeaders)
-                        .body(new ResponseLogin("succes","user creted succefully", newUser,token));
-
+                        .body(new ResponseTemplate<ResponseLogin>(
+                                "succes",
+                                "user creted succefully",
+                                new ResponseLogin( newUser,token)
+                        ));
             }else{
                 return ResponseEntity.badRequest()
-                        .body(new ResponseLogin("fail","user was already created", null,null));
+                        .body(new ResponseTemplate<ResponseLogin>(
+                                "fail",
+                                "user was already created",
+                                new ResponseLogin( null, null)
+                        ));
             }
 
         }catch(Throwable err){
             return ResponseEntity.badRequest()
-                    .body(new ResponseLogin("fail","error occured creating the user", null,null));
+                    .body(new ResponseTemplate<ResponseLogin>(
+                            "fail",
+                            "internal error occured creating the user",
+                            new ResponseLogin( null, null)
+                    ));
         }
     }
 
@@ -72,16 +86,29 @@ public class AuthController {
 
                 return ResponseEntity.ok()
                         .headers(responseHeaders)
-                        .body(new ResponseLogin("succes","user logged succefully", null, token));
+                        .body(new ResponseTemplate<ResponseLogin>(
+                                "succes",
+                                "user logged succefully",
+                                new ResponseLogin( null,token)
+                        ));
 
             }else{
                 return ResponseEntity.badRequest()
-                        .body(new ResponseLogin("fail","user credentials dont match", null,null));
+                        .body(new ResponseTemplate<ResponseLogin>(
+                        "fail",
+                        "user credentials dont match",
+                        new ResponseLogin( null, null)
+                ));
             }
 
         }catch(Throwable err){
             return ResponseEntity.badRequest()
-                    .body(new ResponseLogin("fail","error occured login the user", null,null));
+//                    .body(new ResponseLogin("fail","error occured login the user", null,null));
+                    .body(new ResponseTemplate<ResponseLogin>(
+                            "succes",
+                            "internal error ocurred login the user",
+                            new ResponseLogin( null, null)
+                    ));
         }
     }
 
@@ -93,15 +120,9 @@ public class AuthController {
         return token;
     }
 
-//
-//    // endpoints used by other microservices
-//
-//    @GetMapping("/authorized/jwt")
-//    public ResponseEntity authorizeJwt() {
-//
-//    }
 
-    // increase and decrease user credit should be managed with rabbitmq over http
+    // endpoints used by other microservices
+
 
 
 }
