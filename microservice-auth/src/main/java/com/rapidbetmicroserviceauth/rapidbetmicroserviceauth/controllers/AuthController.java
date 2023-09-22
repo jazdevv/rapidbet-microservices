@@ -123,6 +123,28 @@ public class AuthController {
 
     // endpoints used by other microservices
 
+    @GetMapping("/authorized/jwt")
+    public ResponseEntity authorizeJwt(@RequestBody AuthorizeJWTDTO body) {
+        try{
+            Boolean isAuthorized;
 
+            isAuthorized = this.jwtUtil.authorize(body.getJwt());
+
+            return ResponseEntity.ok()
+                    .body(new ResponseTemplate<ResponseAuthorizeJWT>(
+                            "succes",
+                            "",
+                            new ResponseAuthorizeJWT(isAuthorized)
+                    ));
+
+        }catch(Throwable err){
+            return ResponseEntity.badRequest()
+                    .body(new ResponseTemplate<ResponseAuthorizeJWT>(
+                            "succes",
+                            "internal error occurred",
+                            new ResponseAuthorizeJWT(false)
+                    ));
+        }
+    }
 
 }
