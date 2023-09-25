@@ -32,6 +32,24 @@ class Bets extends Controller
         }
     }
 
+    public function getGames(){
+        try{
+            $games = Game::get();
+
+            return response()->json([
+                'status' => 'succes',
+                'message' => 'game created correctly',
+                'data' => $games
+            ]);
+        }catch(\Exception $e){
+            return response()->json([
+                'status' => 'fail',
+                'message' => "$e",
+                'data' => ''
+            ]);
+        }
+    }
+
     public function newGameBet(){
 
     }

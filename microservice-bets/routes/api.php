@@ -26,6 +26,11 @@ Route::prefix('/v1')->group(function (){
         Route::post('/setWinnerGameBet',[Bets::class,'setWinnerGameBet']);
     });
 
+    Route::prefix('/bets')->group(function (){
+        Route::get('/all',[Bets::class,'getGames']);
+    });
+
+
 });
 
 
