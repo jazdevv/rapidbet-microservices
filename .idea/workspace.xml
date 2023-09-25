@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="251348df-1c81-4e0f-8221-fbde48fd1738" name="Changes" comment="add: postgres userbets instance to docker-compose">
+      <change afterPath="$PROJECT_DIR$/microservice-auth/src/main/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/rabbitmq/dto/IncreaseCredit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-auth/src/main/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/rabbitmq/dto/IncreaseCreditStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-auth/src/main/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/rabbitmq/publisher/SetCreditPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-auth/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-auth/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-auth/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-auth/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-auth/src/main/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/payload/DTO/AuthorizeJWTDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-auth/src/main/java/com/rapidbetmicroserviceauth/rapidbetmicroserviceauth/payload/DTO/AuthorizeJWTDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-auth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-auth/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jazdevv&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4a3ec9cc-cea0-478d-b24c-502cc200c16d" />
+        <option name="url" value="https://github.com/jazdevv/rapidbet-microservices.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2VRTrggl8tfYYggugPsJk4Kn9R7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/J/Desktop/daw-1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\J\Desktop\rapidbet-microservices\microservice-auth" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
+    <configuration name="build-images.bash" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/build-images.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="Shell Script.build-images.bash" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.build-images.bash" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="251348df-1c81-4e0f-8221-fbde48fd1738" name="Changes" comment="" />
+      <created>1694798092172</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694798092172</updated>
+      <workItem from="1694798093274" duration="649000" />
+      <workItem from="1694950234748" duration="16597000" />
+      <workItem from="1695014685898" duration="1213000" />
+      <workItem from="1695034202303" duration="599000" />
+      <workItem from="1695041516808" duration="599000" />
+      <workItem from="1695050650415" duration="1506000" />
+      <workItem from="1695052171494" duration="4169000" />
+      <workItem from="1695112961930" duration="614000" />
+      <workItem from="1695118168893" duration="1797000" />
+      <workItem from="1695186750207" duration="1228000" />
+      <workItem from="1695236628092" duration="2814000" />
+      <workItem from="1695306735393" duration="610000" />
+      <workItem from="1695318594305" duration="1198000" />
+      <workItem from="1695360165874" duration="1045000" />
+      <workItem from="1695367789222" duration="635000" />
+    </task>
+    <task id="LOCAL-00001" summary="add: docker compose with rabbitmq and auth service and postgrees container">
+      <option name="closed" value="true" />
+      <created>1694962761373</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694962761374</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add: add Dockerfile to auth microservice">
+      <option name="closed" value="true" />
+      <created>1694976163981</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694976163981</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add: automate service compiling and docker image cration">
+      <option name="closed" value="true" />
+      <created>1694976244554</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694976244554</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: project compiling">
+      <option name="closed" value="true" />
+      <created>1694977517366</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694977517366</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add: postgres bets instance to docker-compose">
+      <option name="closed" value="true" />
+      <created>1695187007191</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695187007191</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add: postgres userbets instance to docker-compose">
+      <option name="closed" value="true" />
+      <created>1695187055188</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695187055189</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add: docker compose with rabbitmq and auth service and postgrees container" />
+    <MESSAGE value="add: add Dockerfile to auth microservice" />
+    <MESSAGE value="add: automate service compiling and docker image cration" />
+    <MESSAGE value="fix: project compiling" />
+    <MESSAGE value="add: postgres bets instance to docker-compose" />
+    <MESSAGE value="add: postgres userbets instance to docker-compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: postgres userbets instance to docker-compose" />
+  </component>
+</project>
