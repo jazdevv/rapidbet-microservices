@@ -41,6 +41,19 @@ public class UserService {
         }
     }
 
+    public Boolean verifyAdmin(Long userid){
+        try{
+            User user = this.userRepository.findById(userid).orElse(null);
+            if(user.getAdmin() == true){
+                return true;
+            }else{
+                return null;
+            }
+        }catch(Throwable err){
+            return null;
+        }
+    }
+
     public Float getUserCredit(Long userid){
         try{
             User user = this.userRepository.findById(userid).orElse(null);

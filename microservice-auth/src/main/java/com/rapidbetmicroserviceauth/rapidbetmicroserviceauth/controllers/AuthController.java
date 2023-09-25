@@ -147,4 +147,30 @@ public class AuthController {
         }
     }
 
+    @GetMapping("/authorized/admin/jwt")
+    public ResponseEntity authorizeAdminJwt(@RequestBody AuthorizeJWTDTO body) {
+        try{
+            Boolean isAuthorized = false;
+
+            Long userid = this.jwtUtil.extractUserId(body.getJwt());
+
+            isAuthorized = this.userService.verifyAdmin(userid);
+
+            return ResponseEntity.ok()
+                    .body(new ResponseTemplate<ResponseAuthorizeJWT>(
+                            "succes",
+                            "",
+                            new ResponseAuthorizeJWT(isAuthorized)
+                    ));
+
+        }catch(Throwable err){
+            return ResponseEntity.badRequest()
+                    .body(new ResponseTemplate<ResponseAuthorizeJWT>(
+                            "succes",
+                            "internal error occurred",
+                            new ResponseAuthorizeJWT(false)
+                    ));
+        }
+    }
+
 }

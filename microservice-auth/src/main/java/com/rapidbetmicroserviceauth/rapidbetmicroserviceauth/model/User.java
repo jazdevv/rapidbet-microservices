@@ -17,6 +17,9 @@ public class User {
     @Column(name = "credit")
     private Float credit;
 
+    @Column(name="isAdmin", columnDefinition = "BOOLEAN DEFAULT true") //true set for development purposes
+    private Boolean isAdmin;
+
     public Long getId() {
         return id;
     }
@@ -50,10 +53,12 @@ public class User {
         this.credit = credit;
     }
 
-    @Override
-    public String toString() {
-        return "Person{" + "id=" + id + ", email='" + email + '\'' + ", lastName='" + password
-                + '\'' + '}';
+    public Boolean getAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(Boolean admin) {
+        isAdmin = admin;
     }
 
     // Default constructor without any arguments
@@ -64,6 +69,15 @@ public class User {
         this.email = email;
         this.password = password;
         this.credit = 0.0F;
+        this.isAdmin = false;
+    }
+
+    public User(Long id, String email, String password, Float credit, Boolean isAdmin) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.credit = credit;
+        this.isAdmin = isAdmin;
     }
 }
 
