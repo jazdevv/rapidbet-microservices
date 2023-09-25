@@ -69,7 +69,7 @@ public class User {
         this.email = email;
         this.password = password;
         this.credit = 0.0F;
-        this.isAdmin = false;
+        this.isAdmin = true;
     }
 
     public User(Long id, String email, String password, Float credit, Boolean isAdmin) {
