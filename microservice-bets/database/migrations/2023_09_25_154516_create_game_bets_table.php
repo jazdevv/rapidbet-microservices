@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('game_bets', function (Blueprint $table) {
-            $table->timestamps();
-            $table->unsignedBigInteger('game_id');
+//            $table->id();
+            $table->integer('game_id');
             $table->string('name');
-            $table->float('round');
+            $table->integer('round');
             $table->string('team1name');
             $table->string('team2name');
             $table->float('team1amount');
@@ -23,16 +23,11 @@ return new class extends Migration
             $table->float('totalAmount');
             $table->float('winner');
             $table->float('odd');
-            $table->float('endDateTimestamp');
-            $table->float('startDateTimestamp');
+            $table->integer('endDateTimestamp');
+            $table->integer('startDateTimestamp');
 
-            //define composite primary key
+            // define composite primary key
             $table->primary(['game_id','round']);
-
-            //define foreign keys
-            $table->foreign('game_id')
-                ->references('id')
-                ->on('games');
         });
     }
 
