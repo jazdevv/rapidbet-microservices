@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Game;
 use App\Models\GameBet;
+use App\RabbitMQ\RMQSender;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Bets extends Controller
 {
@@ -92,11 +94,70 @@ class Bets extends Controller
                 'data' => ''
             ]);
         }
-
     }
 
-    public function setWinnerGameBet(){
+    public function setWinnerGameBet(Request $request){
+        try{
+            $validated = $request->validate([
+                'gameId' => ['required'],
+                'round' => ['required'],
+                'winnerIndex' => ['required']
+            ]);
+            $gameId = $validated["gameId"];
+            $winnerIndex = $validated["winnerIndex"];
+            //calculate odd
+            $data = DB::select("SELECT team1amount, team2amount, totalAmount FROM `game_bets` WHERE game_id = $gameId  AND round = $validated[round];");
+            $result = collect($data) -> first();
 
+            $totalAmount = $result -> totalAmount;
+            $oddRate = 0.0;
+            $sendMessage = false;
+            if($totalAmount > 0.0){
+
+
+                if($winnerIndex == 0){
+                    $teamAmount = $result -> team1amount;
+                    if($teamAmount > 0.0){
+                        $oddRate = $totalAmount / $teamAmount;
+                        $sendMessage = true;
+                    }
+                }else{
+                    $teamAmount = $result -> team2amount;
+                    if($teamAmount > 0.0){
+                        $oddRate = $totalAmount / $teamAmount;
+                        $sendMessage = true;
+                    }
+                }
+
+                if($sendMessage){
+                    // update gamebet data
+                    DB::statement("UPDATE `game_bets` SET `odd`=$oddRate, `winner`=$winnerIndex WHERE game_id = $gameId  AND round = $validated[round];");
+
+                    // emit rabbitmq message for the userbet microservice
+                    $rabbitmq = new RMQSender();
+                    $rabbitmq->sendMessageFinishBets('message from laravel bets microservice');
+                }
+
+            }else{
+                DB::statement("UPDATE `game_bets` SET `odd`=$oddRate, `winner`=$winnerIndex WHERE game_id = $gameId  AND round = $validated[round];");
+            }
+
+
+            return response()->json([
+                'status' => 'succes',
+                'message' => '',
+                'data' => [
+                    'oddRate' => $oddRate,
+                    'sendMessage' => $sendMessage
+                ]
+            ]);
+        }catch(\Exception $e){
+            return response()->json([
+                'status' => 'fail',
+                'message' => "$e",
+                'data' => ''
+            ]);
+        }
     }
 
     private function restrictToAdmins(){
