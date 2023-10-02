@@ -25,8 +25,10 @@ function Build-Image {
 # define images data to create
 $auth_image = "rapidbetauth:latest"
 $auth_path = "microservice-auth"
+$bets_image = "rapidbetbets:latest"
+$bets_path = "microservice-bets"
 
 Build-Image -image_name $auth_image -image_path $auth_path
-# Build-Image
+Build-Image -image_name $bets_image -image_path $bets_path
 
 pause
