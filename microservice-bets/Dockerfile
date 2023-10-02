@@ -12,4 +12,4 @@ COPY . /app
 RUN composer install --ignore-platform-req=ext-bcmath
 
 EXPOSE 8000
-CMD php artisan serve --host=0.0.0.0 --port=8000
+CMD php artisan migrate:fresh && php artisan serve --host=0.0.0.0 --port=8000
