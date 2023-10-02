@@ -3,7 +3,7 @@ services:
   # Message broker rabbitmq
   rabbitmq:
     image: "rabbitmq:management"
-    # mem_limit: 100M
+    mem_limit: 100M
     container_name: rabbitmq
     ports:
       - "5672:5672"   # RabbitMQ main port
@@ -14,18 +14,14 @@ services:
   #Service for the recetas application
 #  auth:
 #    image: rapidbetauth:latest
-#    # mem_limit: 500M
+#    mem_limit: 500M
 #    ports:
 #      - "3001:3001"
-#    environment:
-#      - SERVER_PORT=3001
-#      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres_auth:5433/mydb
-#      - SPRING_DATASOURCE_USERNAME=admin
-#      - SPRING_DATASOURCE_PASSWORD=admin
-#      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
+##    environment:
+#
 #    depends_on:
 #      - postgres_auth
-##      - rabbitmq
+#      - rabbitmq
 
   # PostgreSQL database service for auth application
   postgres_auth:
@@ -39,27 +35,25 @@ services:
       PGPORT: 5433
     ports:
       - "5433:5433"
-  # PostgreSQL database service for bets application
-  postgres_bets:
-    image: postgres:latest
-    # mem_limit: 50M
-    container_name: postgres_bets
+  # MySQL database service for bets application
+  mysql:
+    image: mysql:8.0
     environment:
-      POSTGRES_DB: mydb
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      PGPORT: 5434
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: microservice_bets
+      MYSQL_USER: rootuser
+      MYSQL_PASSWORD: root
     ports:
-      - "5434:5434"
+      - "3307:3306"
   # PostgreSQL database service for userbets application
-  postgres_userbets:
-    image: postgres:latest
-    # mem_limit: 50M
-    container_name: postgres_userbets
-    environment:
-      POSTGRES_DB: mydb
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      PGPORT: 5435
-    ports:
-      - "5435:5435"
+#  postgres_userbets:
+#    image: postgres:latest
+#    mem_limit: 50M
+#    container_name: postgres_userbets
+#    environment:
+#      POSTGRES_DB: mydb
+#      POSTGRES_USER: admin
+#      POSTGRES_PASSWORD: admin
+#      PGPORT: 5435
+#    ports:
+#      - "5435:5435"
