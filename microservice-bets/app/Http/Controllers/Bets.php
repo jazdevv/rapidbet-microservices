@@ -18,6 +18,15 @@ class Bets extends Controller
                 'name' => ['required']
             ]);
 
+            $data = DB::select("SELECT * FROM `games` WHERE id = $validated[id]");
+            if(collect($data) -> isNotEmpty()){
+                return response()->json([
+                    'status' => 'fail',
+                    'message' => "game exists",
+                    'data' => ''
+                ]);
+            }
+
             $game = new Game();
             $game -> id = $validated['id'];
             $game -> name = $validated['name'];
@@ -64,7 +73,14 @@ class Bets extends Controller
                 'startDateTimestamp' => ['required'],
                 'endDateTimestamp' => ['required']
             ]);
-
+            $data = DB::select("SELECT team1amount, team2amount, totalAmount FROM `game_bets` WHERE game_id = $validated[gameId]  AND round = $validated[round];");
+            if(collect($data) -> isNotEmpty()){
+                return response()->json([
+                    'status' => 'fail',
+                    'message' => "game bet exists",
+                    'data' => ''
+                ]);
+            }
             $gameBet = new GameBet();
             $gameBet -> game_id = $validated['gameId'];
             $gameBet -> name = $validated['name'];
