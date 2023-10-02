@@ -21,7 +21,7 @@ return new class extends Migration
             $table->float('team1amount');
             $table->float('team2amount');
             $table->float('totalAmount');
-            $table->float('winner');
+            $table->integer('winner');
             $table->float('odd');
             $table->integer('endDateTimestamp');
             $table->integer('startDateTimestamp');

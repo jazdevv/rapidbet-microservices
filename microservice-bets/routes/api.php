@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Bets;
+use App\Http\Middleware\ProtectedAdmin;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('/v1')->group(function (){
 
-    Route::prefix('/admin')->group(function (){
+    Route::middleware(ProtectedAdmin::class)->prefix('/admin')->group(function (){
         Route::post('/newGame',[Bets::class,'newGame']);
         Route::post('/newGameBet',[Bets::class,'newGameBet']);
         Route::post('/setWinnerGameBet',[Bets::class,'setWinnerGameBet']);
